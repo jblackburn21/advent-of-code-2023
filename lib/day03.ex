@@ -122,8 +122,8 @@ defmodule Day03.Part2 do
     part_nums = Day03.Part1.get_digits(lines, gears)
     |> Day03.Part1.get_digit_chunks
     |> Enum.map(fn chunk ->
-      {first_digit, {row, start_col}, _} = chunk |> Enum.at(0)
-      {last_digit, {row, end_col}, _} = chunk |> Enum.at(Enum.count(chunk) - 1)
+      {_, {_, start_col}, _} = chunk |> Enum.at(0)
+      {_, {row, end_col}, _} = chunk |> Enum.at(Enum.count(chunk) - 1)
 
       # IO.puts("First digit: {#{row},#{start_col}} #{first_digit}, Last digit: {#{row},#{end_col}} #{last_digit}")
 
