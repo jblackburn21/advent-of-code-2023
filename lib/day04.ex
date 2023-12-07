@@ -43,9 +43,9 @@ defmodule Day04.Part2 do
     |> Enum.map(fn {card_num, _} -> {card_num, 1} end)
     |> Map.new
 
-    IO.puts("")
-    cards |> Enum.each(fn {card_num, winning_cnt} -> IO.puts("Card #{card_num}: #{winning_cnt}") end)
-    IO.puts("")
+    # IO.puts("")
+    # cards |> Enum.each(fn {card_num, winning_cnt} -> IO.puts("Card #{card_num}: #{winning_cnt}") end)
+    # IO.puts("")
 
     m = Enum.reduce(cards, map, fn {card_num, winning_cnt}, acc ->
 
@@ -69,8 +69,8 @@ defmodule Day04.Part2 do
 
     end)
 
-    IO.puts("")
-    m |> Enum.each(fn {k, v} -> IO.puts("Card #{k}: #{v}") end)
+    # IO.puts("")
+    # m |> Enum.each(fn {k, v} -> IO.puts("Card #{k}: #{v}") end)
 
     m |> Enum.map(fn {_, v} -> v end) |> Enum.sum
   end
