@@ -19,8 +19,8 @@ defmodule Day06.Part1 do
     |> Enum.with_index( )
     |> Enum.map(fn {time, idx} -> {time, Enum.at(distances, idx)} end)
 
-    IO.puts("")
-    time_to_dist_map |> Enum.each(fn {time, dist} -> IO.puts("Time: #{time}, Dist: #{dist}") end)
+    # IO.puts("")
+    # time_to_dist_map |> Enum.each(fn {time, dist} -> IO.puts("Time: #{time}, Dist: #{dist}") end)
 
     time_to_dist_map
     |> Enum.map(fn {time, dist} ->
@@ -30,7 +30,7 @@ defmodule Day06.Part1 do
       |> Enum.filter(fn td -> td > dist end)
       |> Enum.count
 
-      IO.puts("Winnable count: #{cnt}")
+      # IO.puts("Winnable count: #{cnt}")
 
       cnt
     end)
@@ -73,8 +73,8 @@ defmodule Day06.Part2 do
     |> Enum.join
     |> String.to_integer
 
-    IO.puts("")
-    IO.puts("Time: #{time}, Dist: #{dist}")
+    # IO.puts("")
+    # IO.puts("Time: #{time}, Dist: #{dist}")
 
     throttle_distances = Day06.Part1.calc_throttle_distances(time)
 
