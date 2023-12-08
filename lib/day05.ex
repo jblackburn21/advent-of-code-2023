@@ -128,7 +128,7 @@ defmodule Day05.Part2 do
     |> Enum.map(&Range.to_list/1)
     |> List.flatten()
     |> Enum.map(fn seed_num ->
-      IO.puts("Seed: #{seed_num}")
+      # IO.puts("Seed: #{seed_num}")
       [
         seed_to_soil_map,
         soil_to_fertilizer_map,
